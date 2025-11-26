@@ -1,15 +1,82 @@
-body {font-family: Arial; margin:0; background:#f7f7f7;}
-.top-banner {text-align:center; padding:40px 20px; background:#1a73e8; color:white;}
-.profile-pic {width:130px; height:130px; border-radius:50%; border:4px solid white;}
-.name {font-size:32px; margin-top:15px;}
-.subtitle {font-size:18px; margin-top:5px;}
+:root {
+  --bg: #ffffff;
+  --text: #222;
+  --primary: #1a73e8;
+  --nav-bg: #f1f3f4;
+  --card-bg: #ffffff;
+}
 
-.navbar {display:flex; justify-content:center; gap:20px; background:white; padding:15px; box-shadow:0 2px 5px rgba(0,0,0,0.1);}
-.navbar a {text-decoration:none; color:#1a73e8; font-weight:bold;}
+.dark-mode {
+  --bg: #121212;
+  --text: #e5e5e5;
+  --primary: #8ab4f8;
+  --nav-bg: #1f1f1f;
+  --card-bg: #1e1e1e;
+}
 
-.section {max-width:900px; margin:40px auto; background:white; padding:30px; border-radius:10px; box-shadow:0 2px 8px rgba(0,0,0,0.1);}
-h2 {color:#1a73e8;}
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: var(--bg);
+  color: var(--text);
+  transition: 0.3s;
+}
 
-.card {background:#fafafa; border-left:4px solid #1a73e8; padding:15px; margin-top:20px; border-radius:6px;}
+header {
+  background: var(--primary);
+  color: white;
+  padding: 25px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
 
-footer {text-align:center; padding:20px; color:#666;}
+nav {
+  background: var(--nav-bg);
+  padding: 10px 0;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+nav a {
+  text-decoration: none;
+  color: var(--primary);
+  font-weight: bold;
+}
+
+main {
+  padding: 30px;
+  max-width: 900px;
+  margin: auto;
+}
+
+.card {
+  padding: 20px;
+  background: var(--card-bg);
+  border-radius: 10px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+button, .toggle-btn {
+  background: var(--primary);
+  color: white;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+/* Footer styling */
+footer {
+  background: var(--nav-bg);
+  padding: 20px;
+  text-align: center;
+  margin-top: 40px;
+}
+footer a {
+  color: var(--primary);
+  text-decoration: none;
+  margin: 0 8px;
+}
